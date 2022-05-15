@@ -1,0 +1,648 @@
+{
+	"info": {
+		"_postman_id": "b2247c57-0e3f-424d-a4f4-6fce21fcd985",
+		"name": "Rent Car V4 PAULO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SignUp / Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"tiago17kirito@gmail.com\",\r\n    \"password\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3200/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"paulo.coelho.ubereats@gmail.com\",\r\n    \"password\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3200/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Forgot Password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Baerer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBhdWxvLmNvZWxoby51YmVyZWF0c0BnbWFpbC5jb20iLCJ1c2VySWQiOiI2MjgxMjYyYzUwZTUwNzI4MWFhZWQzODEiLCJyb2xlIjp7InJvbGUiOiJBRE1JTiJ9LCJpYXQiOjE2NTI2MzU3MzcsImV4cCI6MTY1MjcyMjEzN30.aibMmCkIE_ik-r5kcPe0Bsz2FF8DuAbB-JFepg2q4vA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"paulo.coelho.ubereats@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3200/user/forgotpassword",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"user",
+						"forgotpassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change / New Password",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Baerer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBhdWxvLmNvZWxoby51YmVyZWF0c0BnbWFpbC5jb20iLCJ1c2VySWQiOiI2MjgxMjYyYzUwZTUwNzI4MWFhZWQzODEiLCJyb2xlIjp7InJvbGUiOiJBRE1JTiJ9LCJpYXQiOjE2NTI2MzU3MzcsImV4cCI6MTY1MjcyMjEzN30.aibMmCkIE_ik-r5kcPe0Bsz2FF8DuAbB-JFepg2q4vA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\":\"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3200/user/changepassword/paulo.coelho.ubereats@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"user",
+						"changepassword",
+						"paulo.coelho.ubereats@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove User By ID",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Baerer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBhdWxvLmNvZWxoby51YmVyZWF0c0BnbWFpbC5jb20iLCJ1c2VySWQiOiI2MjgxMjYyYzUwZTUwNzI4MWFhZWQzODEiLCJyb2xlIjp7InJvbGUiOiJBRE1JTiJ9LCJpYXQiOjE2NTI2MzU3MzcsImV4cCI6MTY1MjcyMjEzN30.aibMmCkIE_ik-r5kcPe0Bsz2FF8DuAbB-JFepg2q4vA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3200/user/627efbb90fd347c0ce85263a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"user",
+						"627efbb90fd347c0ce85263a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create New Car",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Baerer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBhdWxvLmNvZWxoby51YmVyZWF0c0BnbWFpbC5jb20iLCJ1c2VySWQiOiI2MjgxMjYyYzUwZTUwNzI4MWFhZWQzODEiLCJyb2xlIjp7InJvbGUiOiJBRE1JTiJ9LCJpYXQiOjE2NTI2MzU3MzcsImV4cCI6MTY1MjcyMjEzN30.aibMmCkIE_ik-r5kcPe0Bsz2FF8DuAbB-JFepg2q4vA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"carType\": \"Prestige\",\r\n    \"brand\": \"Audi\",\r\n    \"model\": \"A3\",\r\n    \"seatingCapacity\": 5,\r\n    \"numDoors\": 5,\r\n    \"transmisson\": \"Manual\",\r\n    \"rentPricePerDay\": 200\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3200/cars",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Cars",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Baerer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBhdWxvLmNvZWxoby51YmVyZWF0c0BnbWFpbC5jb20iLCJ1c2VySWQiOiI2MjgxMjYyYzUwZTUwNzI4MWFhZWQzODEiLCJyb2xlIjp7InJvbGUiOiJBRE1JTiJ9LCJpYXQiOjE2NTI2MzU3MzcsImV4cCI6MTY1MjcyMjEzN30.aibMmCkIE_ik-r5kcPe0Bsz2FF8DuAbB-JFepg2q4vA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3200/stand/cars",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"stand",
+						"cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Car For Brand",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Baerer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBhdWxvLmNvZWxoby51YmVyZWF0c0BnbWFpbC5jb20iLCJ1c2VySWQiOiI2MjgxMjYyYzUwZTUwNzI4MWFhZWQzODEiLCJyb2xlIjp7InJvbGUiOiJBRE1JTiJ9LCJpYXQiOjE2NTI2MzU3MzcsImV4cCI6MTY1MjcyMjEzN30.aibMmCkIE_ik-r5kcPe0Bsz2FF8DuAbB-JFepg2q4vA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3200/stand/cars/search/Car",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"stand",
+						"cars",
+						"search",
+						"Car"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "For Specific Car ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Baerer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBhdWxvLmNvZWxoby51YmVyZWF0c0BnbWFpbC5jb20iLCJ1c2VySWQiOiI2MjgxMjYyYzUwZTUwNzI4MWFhZWQzODEiLCJyb2xlIjp7InJvbGUiOiJBRE1JTiJ9LCJpYXQiOjE2NTI2MzU3MzcsImV4cCI6MTY1MjcyMjEzN30.aibMmCkIE_ik-r5kcPe0Bsz2FF8DuAbB-JFepg2q4vA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3200/stand/cars/6281067f2aeaae30ccdf57cd?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"stand",
+						"cars",
+						"6281067f2aeaae30ccdf57cd"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Car Details By ID",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRpYWdvMTdraXJpdG9AZ21haWwuY29tIiwidXNlcklkIjoiNjI4MTI3MDk1MGU1MDcyODFhYWVkMzhiIiwicm9sZSI6eyJyb2xlIjoiQ0xJRU5UIn0sImlhdCI6MTY1MjYzMTM4NiwiZXhwIjoxNjUyNzE3Nzg2fQ.F8BD02alCpsXRSepDY_R9WBcgFzIleFNTDK50ghN-0A",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"rentPricePerDay\": 50\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3200/stand/cars/6281067f2aeaae30ccdf57cd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"stand",
+						"cars",
+						"6281067f2aeaae30ccdf57cd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Car By ID",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRpYWdvMTdraXJpdG9AZ21haWwuY29tIiwidXNlcklkIjoiNjI4MTI3MDk1MGU1MDcyODFhYWVkMzhiIiwicm9sZSI6eyJyb2xlIjoiQ0xJRU5UIn0sImlhdCI6MTY1MjYzMTM4NiwiZXhwIjoxNjUyNzE3Nzg2fQ.F8BD02alCpsXRSepDY_R9WBcgFzIleFNTDK50ghN-0A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3200/stand/cars/628108b62aeaae30ccdf57d7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"stand",
+						"cars",
+						"628108b62aeaae30ccdf57d7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Rent Reservation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRpYWdvMTdraXJpdG9AZ21haWwuY29tIiwidXNlcklkIjoiNjI4MTI3MDk1MGU1MDcyODFhYWVkMzhiIiwicm9sZSI6eyJyb2xlIjoiQ0xJRU5UIn0sImlhdCI6MTY1MjYzMTM4NiwiZXhwIjoxNjUyNzE3Nzg2fQ.F8BD02alCpsXRSepDY_R9WBcgFzIleFNTDK50ghN-0A",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"carId\": \"628106d42aeaae30ccdf57cf\",\r\n    \"collectDate\": \"2022-2-1\",\r\n    \"returnDate\": \"2022-2-3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3200/stand/rent",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"stand",
+						"rent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Rent Reservations",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRpYWdvMTdraXJpdG9AZ21haWwuY29tIiwidXNlcklkIjoiNjI4MTI3MDk1MGU1MDcyODFhYWVkMzhiIiwicm9sZSI6eyJyb2xlIjoiQ0xJRU5UIn0sImlhdCI6MTY1MjYzMTM4NiwiZXhwIjoxNjUyNzE3Nzg2fQ.F8BD02alCpsXRSepDY_R9WBcgFzIleFNTDK50ghN-0A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3200/stand/rent",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"stand",
+						"rent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "For Specific Rent Reservation ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Baerer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBhdWxvLmNvZWxoby51YmVyZWF0c0BnbWFpbC5jb20iLCJ1c2VySWQiOiI2MjgxMjYyYzUwZTUwNzI4MWFhZWQzODEiLCJyb2xlIjp7InJvbGUiOiJBRE1JTiJ9LCJpYXQiOjE2NTI2MzU3MzcsImV4cCI6MTY1MjcyMjEzN30.aibMmCkIE_ik-r5kcPe0Bsz2FF8DuAbB-JFepg2q4vA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3200/stand/rent/62810bdb9b24277cb6101c38",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"stand",
+						"rent",
+						"62810bdb9b24277cb6101c38"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Rent Reservation By ID",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Baerer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBhdWxvLmNvZWxoby51YmVyZWF0c0BnbWFpbC5jb20iLCJ1c2VySWQiOiI2MjgxMjYyYzUwZTUwNzI4MWFhZWQzODEiLCJyb2xlIjp7InJvbGUiOiJBRE1JTiJ9LCJpYXQiOjE2NTI2MzU3MzcsImV4cCI6MTY1MjcyMjEzN30.aibMmCkIE_ik-r5kcPe0Bsz2FF8DuAbB-JFepg2q4vA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"motivo\": \"car breakdown\",\r\n    \"email\": \"paulo.coelho.ubereats@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3200/stand/rent/6281403fea0fcd377e970ccc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"stand",
+						"rent",
+						"6281403fea0fcd377e970ccc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Image Of Specific Car",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRpYWdvMTdraXJpdG9AZ21haWwuY29tIiwidXNlcklkIjoiNjI4MTI3MDk1MGU1MDcyODFhYWVkMzhiIiwicm9sZSI6eyJyb2xlIjoiQ0xJRU5UIn0sImlhdCI6MTY1MjYzMTM4NiwiZXhwIjoxNjUyNzE3Nzg2fQ.F8BD02alCpsXRSepDY_R9WBcgFzIleFNTDK50ghN-0A",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "carId",
+							"value": "6281067f2aeaae30ccdf57cd",
+							"type": "text"
+						},
+						{
+							"key": "carImage",
+							"type": "file",
+							"src": "/C:/Users/paulo/OneDrive/Imagens/mla.JPG"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3200/stand/images",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"stand",
+						"images"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Car Images",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRpYWdvMTdraXJpdG9AZ21haWwuY29tIiwidXNlcklkIjoiNjI4MTI3MDk1MGU1MDcyODFhYWVkMzhiIiwicm9sZSI6eyJyb2xlIjoiQ0xJRU5UIn0sImlhdCI6MTY1MjYzMTM4NiwiZXhwIjoxNjUyNzE3Nzg2fQ.F8BD02alCpsXRSepDY_R9WBcgFzIleFNTDK50ghN-0A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3200/stand/images",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"stand",
+						"images"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "For Specific Car Image ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRpYWdvMTdraXJpdG9AZ21haWwuY29tIiwidXNlcklkIjoiNjI4MTI3MDk1MGU1MDcyODFhYWVkMzhiIiwicm9sZSI6eyJyb2xlIjoiQ0xJRU5UIn0sImlhdCI6MTY1MjYzMTM4NiwiZXhwIjoxNjUyNzE3Nzg2fQ.F8BD02alCpsXRSepDY_R9WBcgFzIleFNTDK50ghN-0A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3200/stand/images/62810ecdd54dcdbc3d4f8341",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"stand",
+						"images",
+						"62810ecdd54dcdbc3d4f8341"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Car Image By ID",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRpYWdvMTdraXJpdG9AZ21haWwuY29tIiwidXNlcklkIjoiNjI4MTI3MDk1MGU1MDcyODFhYWVkMzhiIiwicm9sZSI6eyJyb2xlIjoiQ0xJRU5UIn0sImlhdCI6MTY1MjYzMTM4NiwiZXhwIjoxNjUyNzE3Nzg2fQ.F8BD02alCpsXRSepDY_R9WBcgFzIleFNTDK50ghN-0A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3200/stand/images/627f045800bb20dad6d914fd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"stand",
+						"images",
+						"627f045800bb20dad6d914fd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TESTE",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3200/rent/search/12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"rent",
+						"search",
+						"12"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
